@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>URBAN'S Barbershop | Excelencia y Estilo en Kanasín</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#e5e2e1",
+                        "on-error": "#690005",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-tertiary-container": "#444545",
+                        "on-background": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "tertiary-fixed": "#e3e2e2",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#b7b5b4",
+                        "outline-variant": "#4d4635",
+                        "on-tertiary": "#2f3131",
+                        "surface-container-highest": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-primary": "#3c2f00",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-surface-variant": "#d0c5af",
+                        "on-secondary": "#313030",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-primary-fixed": "#241a00",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353534",
+                        "inverse-primary": "#735c00",
+                        "primary-container": "#d4af37",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-fixed": "#ffe088",
+                        "on-secondary-fixed-variant": "#474746",
+                        "primary": "#f2ca50",
+                        "on-primary-container": "#554300",
+                        "surface-bright": "#3a3939",
+                        "surface-tint": "#e9c349",
+                        "tertiary-container": "#b3b3b3",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "tertiary": "#cfcece",
+                        "secondary-fixed": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "secondary-container": "#474746",
+                        "outline": "#99907c",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c6c5",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bebas Neue"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Bebas Neue"],
+                        "headline-lg-mobile": ["Bebas Neue"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Bebas Neue"],
+                        "label-sm": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "0.04em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.04em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "0.04em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    },
+                    "animation": {
+                        "zoom-slow": "zoom-slow 20s infinite alternate",
+                    },
+                    "keyframes": {
+                        "zoom-slow": {
+                            "0%": { transform: "scale(1)" },
+                            "100%": { transform: "scale(1.1)" }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A; /* Level 0 Base */
+            color: #e5e2e1;
+        }
+        .bg-level-1 {
+            background-color: #121212;
+            border: 1px solid #222222;
+        }
+        .border-level-1 {
+            border: 1px solid #222222;
+        }
+        .btn-primary {
+            background-color: #D4AF37;
+            color: #0A0A0A;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #f2ca50; /* Brighter */
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+        }
+        .location-card {
+            transition: all 0.4s ease;
+        }
+        .location-card:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+        }
+        .service-row {
+            transition: all 0.3s ease;
+        }
+        .service-row:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-color: #D4AF37;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        .flagship-service {
+            border: 1px solid #D4AF37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
+        }
+        .flagship-service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Reveal Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 100ms; }
+        .reveal-delay-2 { transition-delay: 200ms; }
+        .reveal-delay-3 { transition-delay: 300ms; }
+        .reveal-delay-4 { transition-delay: 400ms; }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto transition-all duration-300">
+<div class="flex items-center gap-4">
+<img alt="URBAN'S Logo" class="h-10 w-10 object-contain rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc38Yl4AkVedCiIMC_UavMDKnWdDtS8W-iSEsQLRhkLOO81pAnRPok0liOGbQMZKffZ4sH-iHJHOsyBi252Ma7pnpCLzCUo1LnLGncumSJ1HyamNsm6qLxmY8QNPi94veiXUeSdx3aLRl6pWdIVP1qhivJnQM9YDRPoP0goX9Fyxl-PH5CY_iWxSYrDsx-7Fv1nZbY2jw0t9uxES2mFFBHC6IaaCmJ_-uTm5j7hqNjw1M-lI6yR9ki"/>
+<span class="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary dark:text-primary">URBAN'S</span>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 font-label-sm text-label-sm uppercase" href="#ubicaciones">Ubicaciones</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 font-label-sm text-label-sm uppercase" href="#servicios">Servicios</a>
+<a class="text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-300 font-label-sm text-label-sm uppercase" href="#nosotros">Nosotros</a>
+</div>
+<a class="hidden md:flex btn-primary px-6 py-2 rounded-DEFAULT font-label-sm text-label-sm uppercase items-center gap-2" href="https://wa.me/529991105881" target="_blank">
+            Agendar Cita
+        </a>
+<!-- Mobile Menu Button (simplified for UI demonstration) -->
+<button class="md:hidden text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</nav>
+<main>
+<!-- 1. Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="A moody, high-end barbershop interior with dark walls, vintage leather chairs, warm amber lighting from Edison bulbs, and premium grooming tools laid out on a marble counter. The atmosphere is masculine, luxurious, and industrial." class="w-full h-full object-cover opacity-30 animate-zoom-slow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWj2A5j34CwWYzV07E4w5oXLGlTC9-BQI4CD5dMb3Uvd4UwqOk-oQd66fvZgR3kTnlfiHnhOjzd1X3VcfY74YVAncBFcqLVdKECAcY0DIAlzxR5fC7t-JzLn6pj49BY-M9ojqX9cfE0vCgRcHGefPQ3_WRLNUN2z88iPR-3UVu4iya-ciY27uFP5VJqZYW8jXjMh2TwH5nXvKPozmtI4d0bBo_nz9DhSg68Boze_HdSbq8ADha41kS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-6 mt-16 reveal active">
+<h1 class="font-display-lg text-display-lg text-on-surface md:text-[100px] md:leading-[100px] uppercase">
+                    Donde la excelencia<br/><span class="text-primary-container">se encuentra con el estilo</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto reveal reveal-delay-1 active">
+                    Barbería de servicio completo exclusivo para caballeros en Kanasín. Un santuario de precisión, textura y confianza.
+                </p>
+<a class="mt-8 btn-primary px-10 py-4 rounded-DEFAULT font-title-lg text-title-lg flex items-center gap-3 w-full md:w-auto justify-center reveal reveal-delay-2 active" href="https://wa.me/529991105881" target="_blank">
+                    Agenda tu cita
+                    <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 2. Ubicaciones Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant/10" id="ubicaciones">
+<div class="flex flex-col items-center text-center mb-16 gap-4 reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Encuéntranos</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase">Nuestras Ubicaciones</h2>
+<div class="w-16 h-1 bg-primary mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Location 1 -->
+<div class="bg-level-1 p-8 rounded-DEFAULT flex flex-col gap-6 relative overflow-hidden group location-card reveal reveal-delay-1">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full transition-transform duration-500 group-hover:scale-125"></div>
+<div class="flex items-start justify-between relative z-10">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">URBAN'S Héctor Victoria</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                C.22 x 29 y 29A
+                            </p>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-level-1 relative z-10">
+<a class="btn-secondary w-full py-3 rounded-DEFAULT font-label-sm text-label-sm uppercase flex items-center justify-center gap-2" href="https://wa.me/529991105881" target="_blank">
+                            Agenda aquí
+                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-12">calendar_today</span>
+</a>
+</div>
+</div>
+<!-- Location 2 -->
+<div class="bg-level-1 p-8 rounded-DEFAULT flex flex-col gap-6 relative overflow-hidden group location-card reveal reveal-delay-2">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full transition-transform duration-500 group-hover:scale-125"></div>
+<div class="flex items-start justify-between relative z-10">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">URBAN'S Sucursal Colibrí</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                C.69 x 40
+                            </p>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-level-1 relative z-10">
+<a class="btn-secondary w-full py-3 rounded-DEFAULT font-label-sm text-label-sm uppercase flex items-center justify-center gap-2" href="https://wa.me/529991105881" target="_blank">
+                            Agenda aquí
+                            <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-12">calendar_today</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. About/Bienvenida Section -->
+<section class="py-24 relative overflow-hidden" id="nosotros">
+<div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-6 reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">El Santuario</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase leading-tight">Bienvenidos a URBAN'S</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        En URBAN'S, no solo cortamos cabello; esculpimos identidad. Nuestro equipo de barberos expertos combina técnicas clásicas con tendencias modernas para ofrecerte un servicio personalizado de primer nivel.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Utilizamos exclusivamente productos premium, asegurando que cada detalle de tu grooming sea impecable. Experimenta la verdadera masculinidad en un ambiente diseñado para tu confort y estilo.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4 reveal reveal-delay-2">
+<div class="bg-level-1 h-48 rounded-DEFAULT bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Close up shot of professional barber clippers and a straight razor resting on a textured dark wood surface. Low key dramatic lighting highlighting the metallic details of the tools. Minimalist, masculine aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKtce3RYRIjmc3FvPWxqWoZmhH30sQyMh_72J1EI2YB2GPjs-mEuv-I9ZiSy2AFHBLRh41EEO_Eu8xCWRt_64op-Ar-ZN_bEj8vAfxfYxkh7SyC9atDGpk29wm19pa8_TdHmam2i-AiNdjsOujEZ4H2ho1p82KPCwkCMqQsMpyc1Tdmx_gyKuaL3UQwKp_xfNL7fUWon03q-pYqcIRF6kr8TROT9wzCie5Dj6Xo0z6fGOTjWpemmiI')"></div>
+<div class="bg-level-1 h-48 rounded-DEFAULT mt-8 bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="A jar of premium men's pomade and a high-quality badger hair shaving brush sitting on a dark slate countertop. Warm, focused spot lighting creating deep shadows. Industrial luxury aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZq36xWsr8ezCHiqSYrBLz1sLlTdju9IH-ESXkGNfqQaSCJB4bC844g6lMxhAhDd_2xefDs_zzIAM2ASv_YkNVX31tne2E_0vLEz9ZHLR3U_kAXzGJQ2iHwx-6iWaeL5lkRtGbeIn-3snOuwFYT2suDRVsJHKlXXj5An60gb5LVAca9FSBfRRqRpgZ9SghFLhFDwK0t0JBdEllPxF0kOarAqjYt60U0QFsWgGojeqVyXK2uB5OKNcw')"></div>
+</div>
+</div>
+</section>
+<!-- 4. Servicios Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="servicios">
+<div class="flex flex-col items-center text-center mb-16 gap-4 reveal">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Nuestra Maestría</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase">Menú de Servicios</h2>
+<div class="w-16 h-1 bg-primary mt-2"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-4">
+<!-- Individual Services -->
+<div class="col-span-1 flex flex-col gap-2 reveal reveal-delay-1">
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Corte de cabello</span>
+<span class="font-title-lg text-title-lg text-primary">$150</span>
+</div>
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Arreglo de Barba / Afeitado</span>
+<span class="font-title-lg text-title-lg text-primary">$150</span>
+</div>
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Facial Urban's</span>
+<span class="font-title-lg text-title-lg text-primary">$200</span>
+</div>
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Mascarilla Negra</span>
+<span class="font-title-lg text-title-lg text-primary">$50</span>
+</div>
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Alineado de Ceja</span>
+<span class="font-title-lg text-title-lg text-primary">$50</span>
+</div>
+</div>
+<!-- Combos & Packages -->
+<div class="col-span-1 flex flex-col gap-2 reveal reveal-delay-2">
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Combo Urban <span class="text-sm font-normal text-on-surface-variant block">(Corte + Barba)</span></span>
+<span class="font-title-lg text-title-lg text-primary">$250</span>
+</div>
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Dúo Corte + Ceja</span>
+<span class="font-title-lg text-title-lg text-primary">$200</span>
+</div>
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-2 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Dúo Corte + Black Mask</span>
+<span class="font-title-lg text-title-lg text-primary">$200</span>
+</div>
+<div class="flex justify-between items-end border-b border-level-1 pb-2 mb-4 service-row cursor-default group">
+<span class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">Trío Urban <span class="text-sm font-normal text-on-surface-variant block">(Corte + Ceja + Black Mask)</span></span>
+<span class="font-title-lg text-title-lg text-primary">$200</span>
+</div>
+<!-- Flagship Package -->
+<div class="bg-level-1 flagship-service p-6 rounded-DEFAULT flex flex-col gap-2 mt-4 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full transition-transform duration-500 group-hover:scale-125"></div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">star</span> Paquete Estrella
+                        </span>
+<div class="flex justify-between items-end mt-2">
+<span class="font-headline-md text-headline-md text-on-surface uppercase group-hover:text-primary transition-colors">Experiencia Total Urban's</span>
+<span class="font-headline-md text-headline-md text-primary">$350</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm">El tratamiento definitivo para el hombre moderno. Relajación, precisión y estilo inigualable.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center reveal reveal-delay-3">
+<a class="btn-primary px-10 py-4 rounded-DEFAULT font-title-lg text-title-lg flex items-center gap-3" href="https://wa.me/529991105881" target="_blank">
+                    Reservar Cita
+                    <span class="material-symbols-outlined transition-transform duration-300 group-hover:rotate-12">event_available</span>
+</a>
+</div>
+</section>
+<!-- 5. Contacto Section -->
+<section class="py-24 bg-surface-container-highest border-t border-outline-variant/10" id="contacto">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-8 reveal">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Conecta</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mt-2">Ponte en Contacto</h2>
+<div class="w-16 h-1 bg-primary mt-4"></div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">Horario de Atención</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Lunes a Sábado: 10:00 am – 8:00 pm</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Domingos: 11:00 am – 3:00 pm</p>
+</div>
+</div>
+<div class="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-3xl">chat</span>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">WhatsApp Principal</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">+52 999 110 5881</p>
+</div>
+</div>
+</div>
+<a class="btn-primary px-8 py-4 rounded-DEFAULT font-title-lg text-title-lg flex items-center justify-center gap-3 w-fit mt-4" href="https://wa.me/529991105881" target="_blank">
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110">forum</span>
+                        Contáctanos por WhatsApp
+                    </a>
+</div>
+<!-- Stylized Map Placeholder -->
+<div class="bg-level-1 h-96 rounded-DEFAULT overflow-hidden border border-level-1 relative grayscale contrast-125 opacity-80 hover:grayscale-0 hover:scale-[1.02] transition-all duration-500 reveal reveal-delay-2" data-alt="A stylized, dark mode digital map showing the streets of Kanasin, Mexico. The map is minimal with subtle amber gold markers indicating barbershop locations. High contrast, technical, and clean aesthetic fitting a premium brand." data-location="Kanasin, Mexico" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPzQ7CwUjakBEnMn_VlUSdAVTYHGz4Go0niTZ8wrGHyYFHC7JAee8ZlEj2mQjNhbiOH2PsOtuzEpScicO7gDE-k82KmOzpf6MOUWxlazy7Yc0nFfLmIHkzLTZYR6YBZJxIIV7hQZKgpKAXhwJrSNfpwhKLLE1hh-GuGXVHEwbGRQcgYXW6UXJccQdxxhPYDffhoTdBi3JuX4ApYeM5zWJAbsqd-xoUChpDpmnDzCVFdmowmfC1UHgd')">
+<div class="absolute inset-0 bg-surface/20 pointer-events-none"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 reveal">
+<div class="flex flex-col md:flex-row justify-between items-start gap-gutter px-margin-mobile md:px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 max-w-xs">
+<div class="flex items-center gap-3">
+<img alt="URBAN'S Logo" class="h-12 w-12 object-contain rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc38Yl4AkVedCiIMC_UavMDKnWdDtS8W-iSEsQLRhkLOO81pAnRPok0liOGbQMZKffZ4sH-iHJHOsyBi252Ma7pnpCLzCUo1LnLGncumSJ1HyamNsm6qLxmY8QNPi94veiXUeSdx3aLRl6pWdIVP1qhivJnQM9YDRPoP0goX9Fyxl-PH5CY_iWxSYrDsx-7Fv1nZbY2jw0t9uxES2mFFBHC6IaaCmJ_-uTm5j7hqNjw1M-lI6yR9ki"/>
+<span class="font-headline-lg text-headline-lg text-primary dark:text-primary tracking-widest">URBAN'S</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant mt-2">
+                    Barbería de servicio completo exclusivo para caballeros en Kanasín.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 mt-8 md:mt-0 w-full md:w-auto">
+<div class="flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-on-surface uppercase mb-2 opacity-50">Explora</span>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:translate-x-1 underline transition-all duration-300" href="#ubicaciones">Ubicaciones</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:translate-x-1 underline transition-all duration-300" href="#servicios">Servicios</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:translate-x-1 underline transition-all duration-300" href="#nosotros">Sobre Nosotros</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-sm text-label-sm text-on-surface uppercase mb-2 opacity-50">Social</span>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:translate-x-1 underline transition-all duration-300" href="https://wa.me/529991105881">WhatsApp</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:translate-x-1 underline transition-all duration-300" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary hover:translate-x-1 underline transition-all duration-300" href="#">Facebook</a>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 px-margin-mobile md:px-margin-desktop py-6 text-center max-w-container-max mx-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant opacity-60">
+                © 2024 URBAN'S BARBERSHOP. TODOS LOS DERECHOS RESERVADOS.
+            </span>
+</div>
+</footer>
+<!-- Floating WhatsApp CTA for Mobile -->
+<a class="fixed bottom-6 right-6 md:hidden w-14 h-14 bg-primary text-surface rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(212,175,55,0.4)] z-50 hover:scale-110 hover:bg-primary-fixed transition-all duration-300" href="https://wa.me/529991105881" target="_blank">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+</body></html>
